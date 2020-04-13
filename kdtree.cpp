@@ -129,6 +129,26 @@ public:
 
 int main() 
 {
+  // initialize kdtree with k = 2
+  KdTree<int> tree(2); 
 
+  // initialize points
+  vector<int> v{1,2};
+  vector<int> v2{5,6};
+  vector<int> v3{-2,6};
+  vector<int> v4{9,6};
+  
+  // insert points
+  tree.insert(v); 
+  tree.insert(v2); 
+  tree.insert(v3);
+
+  // display search function 
+  cout << tree.search(v) << endl;
+  cout << tree.search(v2) << endl;
+  cout << tree.search(v3) << endl;
+  cout << tree.search(v4) << endl;
+  
+  tree.printTree();
   return 0;
 }
